@@ -1,0 +1,20 @@
+##create project
+composer create-project laravel/laravel ProjectName
+
+## create file route api.php
+php artisan install:api
+
+## create file model and controller
+php artisan make:model Product --controller
+
+## create file migrations => tạo table
+php artisan make:migration create_products_table
+
+## chạy db them tiền tố --seed để chạy file seed (dữ lieu mẫu)
+php artisan migrate
+
+## create seeder (dữ lieu mẫu)
+php artisan make:seeder ProductTableSeeder
+
+## chạy file seeder
+php artisan db:seed --class=NameSeeder
